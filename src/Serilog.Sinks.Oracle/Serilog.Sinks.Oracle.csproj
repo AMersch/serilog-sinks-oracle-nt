@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net461;netstandard2.0;netstandard2.1</TargetFrameworks>
+    <PackOnBuild>true</PackOnBuild>
+    <PackageId>Serilog.Sinks.OracleNT</PackageId>
+    <Copyright>2020, Andreas Mersch (idesis GmbH)</Copyright>
+    <PackageIconUrl>http://serilog.net/images/serilog-sink-nuget.png</PackageIconUrl>
+    <PackageProjectUrl>http://serilog.net</PackageProjectUrl>
+    <Summary>Serilog event sink that writes to Oracle database (New Technology)</Summary>
+    <PackageTags>serilog;logging;Oracle</PackageTags>
+    <Title>Serilog.Sinks.OracleNT</Title>
+    <Authors>Andreas Mersch</Authors>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>Serilog.Sinks.OracleNT.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Serilog" Version="2.9.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="2.19.80" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="System.Data.Common" Version="4.3.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Sinks\" />
+    <Folder Include="Sinks\Oracle\" />
+    <Folder Include="Sinks\Batch\" />
+    <Folder Include="Sinks\Extensions\" />
+  </ItemGroup>
+</Project>
